@@ -1,0 +1,9 @@
+default: >
+  -f pretty
+  BROWSER=CHROME
+  MOBILE=NO
+  --tags 'not @ignore' --tags 'not @phone' --tags 'not @jira'
+  -f pretty --format junit --out ./reports/
+  -f pretty --format html --out ./reports/results.html
+  -f pretty --format json --out ./reports/result.json
+  -f pretty
